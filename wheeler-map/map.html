@@ -727,8 +727,21 @@
 				var activeStateId = null;
 				var sidebar = $('#sidebar');
 				map.getStyle().layers.forEach(function(layer) {
-					if (!layer.id.includes("labels") && !layer.id.includes("borders")) {
-						if (layer.id.includes("floor")) {
+						if (layer.id == "down-stairbuttons-floor-1"
+							|| layer.id == "up-stairbuttons-floor-1"
+							|| layer.id == "sitting-floor-1"
+							|| layer.id == "recycling-floor-1"
+							|| layer.id == "entryexit-floor-1"
+							|| layer.id == "closed-room-floor-1"
+							|| layer.id == "bathroom-room-floor-1"
+							|| layer.id == "room-floor-1"
+							|| layer.id == "building-floor-1"
+							|| layer.id == "building-floor-5"
+							|| layer.id == "selectable-landcover-parkinglot-floor-6"
+							|| layer.id == "selectable-landcover-court-floor-6"
+							|| layer.id == "selectable-landcover-grass-floor-6"
+							|| layer.id == "selectable-landcover-path-floor-6"
+						) {
 							// Mouse change to pointer and change color on polygon hover
 							map.on('mouseenter', layer.id, function (e) {
 								map.getCanvas().style.cursor = 'pointer';
@@ -803,7 +816,6 @@
 								}
 							});
 						}
-					}
 				});
 				map.on('click', function (e) {
 					if (e.defaultPrevented === false) {
