@@ -54,25 +54,30 @@
 			var matchingFeatures = [];
 			for (var i = 0; i < customData.features.length; i++) {
 				var feature = customData.features[i];
-				for (var j = 0; j < feature.properties.names.length; j++) {
+				console.log("feature: " + feature);
+				if (feature.properties.selectable) {
+					console.log("feature is selectable");
+					console.log(feature.properties.title);
 					// Handle queries with different capitalization than the source data by calling toLowerCase()
+					if (feature.properties.title != null){
 					if (
-						feature.properties.names[j]
+						feature.properties.title
 						.toLowerCase()
-						.search(query.toLowerCase()) !== -1
+						.search(query.toLowerCase()) != -1
 					) {
+						console.log("found match");
 						// Use Carmen geojson format:
 						// https://github.com/mapbox/carmen/blob/master/carmen-geojson.md
-						feature['place_name']	 = feature.properties.title;
+						feature['place_name'] = feature.properties.title;
 						if (feature.geometry.type == "Point") {
 							feature['center'] = feature.geometry.coordinates;
 						} else {
 							var centroid = turf.centerOfMass(turf.polygon(feature.geometry.coordinates));
 							feature['center'] = centroid.geometry.coordinates;
 						}
-						feature['place_type'] = feature.properties.place_type; 
-						
 						matchingFeatures.push(feature);
+						console.log(matchingFeatures);
+					}
 					}
 				}
 			}
@@ -172,7 +177,7 @@
 					id: 'entryexit'
 				},
 				{
-					imageUrl: './images/playground.png',
+					imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Recycling_symbol.svg/20px-Recycling_symbol.svg.png', // './images/playground.png',
 					id: 'playground'
 				},
 				{
@@ -674,7 +679,6 @@
 				// Get all floor-toggled layers
 				var floorLayerIDs = [];
 				map.getStyle().layers.forEach(function(layer) {
-					console.log(layer);
 						if (layer.id.includes("floor-0")
 							|| layer.id.includes("floor-1")
 							|| layer.id.includes("floor-2")
@@ -684,7 +688,6 @@
 							floorLayerIDs.push(layer.id);
 						}
 				});
-				console.log(floorLayerIDs);
 				
 				// Set default to visible first floor
 				changeFloor(1);
