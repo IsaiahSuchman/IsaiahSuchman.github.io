@@ -187,18 +187,18 @@ article aside.side {
 }
 
 article aside p {
-        font-family: var(--sans-font);
+        font-family: var(--serif-font);
         font-weight: var(--light);
         color: var(--alt-text);
 }
 
 article aside > p, article aside note p {
-        font-weight: var(--light);
+        font-weight: var(--regular);
 }
 
 article aside note {
         background-color: var(--green-light-t);
-        border-left: solid 5px var(--green);
+        border-left: solid 5px var(--green-light);
         padding: 10px;
 }
 
@@ -305,7 +305,7 @@ body > header {
 }
 
 body > header nav {
-        border-bottom: solid 1px var(--purple);
+        border-bottom: solid 3px var(--purple);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -313,6 +313,12 @@ body > header nav {
         z-index: 100;
         padding-left: 30px;
         padding-right: 30px;
+}
+
+header nav a {
+        font-family: var(--serif-font);
+        font-size: 150%;
+        color: var(--teal);
 }
 
 @media all and (max-width: calc(250px + 30px + 640px + 250px + 30px)) {
@@ -491,13 +497,15 @@ ul.feed li {
 }
 
 span.feed-header {
-        font-family: var(--sans-font);
-        font-weight: var(--medium);
-        font-variant: small-caps;
-        display: block;
-        text-transform: lowercase;
-        letter-spacing: 0.5pt;
-        margin-bottom: 0.5ex;
+    font-family: var(--serif-font);
+    font-weight: var(--regular);
+    display: block;
+    color: var(--teal);
+    text-transform: uppercase;
+    letter-spacing: 0.5pt;
+    font-size: 0.75em;
+    position: relative;
+    top: -2pt;
 }
 
 span.breadcrumb-spacer {
