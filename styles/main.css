@@ -9,7 +9,7 @@
         --purple: #8252a1;
         --purple-light: #945cbc;
         --blue: #006db7;
-        --blue-t: rgba(0, 109, 183, 0.2);
+        --blue-t: rgba(0, 154, 237, 0.2);
         --blue-light: #009aed;
         --green: #269a85;
         --green-light: #7fc350;
@@ -234,10 +234,12 @@ article ol li, article ul li {
         color: var(--text);
         font-family: var(--sans-font-body);
         list-style-type: "› ";
+        padding-left: 15px;
 }
 
 article ol.ex {
         list-style-type: none;
+        padding-left:0px;
 }
 
 article ul li {
@@ -278,7 +280,7 @@ article ol.ex li:before, article ul li:before  {
 
 code {
         font-family: var(--mono-font);
-        font-size: 70%;
+        font-size: 80%;
         color: var(--text);
         -moz-hyphens: none;
   -ms-hyphens: none;
@@ -400,13 +402,14 @@ header nav a {
 
 a.syn-link {
         display: inline-flex;
-        border-radius: 3px;
-        border: solid 1px var(--purple);
-        justify-content: center;
-        align-items: center;
-        font-family: var(--sans-font);
-        font-weight: var(--regular);
-        font-size: 80%;
+    border-radius: 3px;
+    border: solid 1px var(--blue-light);
+    justify-content: center;
+    align-items: center;
+    font-family: var(--sans-font-body);
+    font-weight: var(--regular);
+    font-size: 80%;
+    color: var(--blue);
 }
 
 a.syn-link span {
@@ -454,6 +457,7 @@ a.section-link::after {
 ul.link-list a.section-link::after {
         content: "›";
         margin-left: 0.5em;
+        font-family: var(--sans-font-body);
 }
 
 a.section-link:hover, a.breadcrumb-link:hover {
@@ -465,6 +469,10 @@ a.breadcrumb-link {
         letter-spacing: 0.5pt;
         font-weight: var(--medium);
         color: var(--text);
+}
+
+ul.link-list h2 {
+        font-weight: var(--medium);
 }
 
 pre {
@@ -518,8 +526,6 @@ ul.feed li {
 
 span.feed-header {
     display: block;
-    position: relative;
-    top: -2pt;
 }
 
 span.breadcrumb-spacer {
