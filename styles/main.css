@@ -247,6 +247,7 @@ li::marker {
         content: "›";
         color: var(--teal);
         font-family: var(--sans-font-body);
+}
 
 li:last-child {
         margin-bottom: 0em !important;
