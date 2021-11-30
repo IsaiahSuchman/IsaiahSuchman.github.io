@@ -86,10 +86,9 @@ p {
 
 .teal {
         color: var(--teal);
-        font-family: var(--serif-font);
 }
 
-.intro {
+.intro, .serif {
         font-family: var(--serif-font);
 }
 
