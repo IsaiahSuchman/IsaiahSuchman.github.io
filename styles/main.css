@@ -56,21 +56,6 @@ html, body {
         background-size:cover;
 }
 
-html::after {
-  content: "";
-  background: url(https://i.imgur.com/7tJxYHT.jpg);
-  opacity: 0.2;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: fixed;
-    z-index: -1;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-}
-
 body {
         font-size: min(var(--font-size), 4vw);
   line-height: var(--line-height);
@@ -110,12 +95,13 @@ div#photo {
 }
 
 img#portrait {
-    height: 200px;
+    height: 210px;
     border-radius: 50%;
 }
 
-div#spacer {
-    min-height: 12ex;
+div.spacer {
+    min-height: calc((100vh - 554px) / 3);
+        display:none;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -442,6 +428,15 @@ header nav a {
 
         article > *:first-child{
                 margin-top: 0;
+        }
+}
+
+@media all and (min-height: 475px) and (max-height: 715px) {
+        ul.link-list {
+                margin-bottom: 64px;
+        }
+        div.spacer {
+                display:block;
         }
 }
 
