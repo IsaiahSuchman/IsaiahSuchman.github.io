@@ -188,6 +188,7 @@ article aside {
         display: grid;
         grid-template-columns: 100%;
         grid-row-gap: 20px;
+        border-radius:3px;
 }
 
 article aside.side {
@@ -458,21 +459,32 @@ ul.link-list a.section-link::after {
         content: "›";
         margin-left: 0.5em;
         font-family: var(--sans-font-body);
+        color: var(--blue);
 }
 
 a.section-link:hover, a.breadcrumb-link:hover {
         background-color: var(--blue-t);
 }
 
+a.section-link:hover::after {
+        padding-left: 5px;
+}
+
 a.breadcrumb-link {
-        font-family: var(--sans-font);
-        letter-spacing: 0.5pt;
-        font-weight: var(--medium);
-        color: var(--text);
+    font-family: var(--sans-font);
+    letter-spacing: 0.5pt;
+    font-weight: var(--medium);
+    color: var(--green-light);
+    position: relative;
+    top: 0.3ex;
 }
 
 ul.link-list h2 {
         font-weight: var(--medium);
+}
+
+ul.link-list a.section-link {
+        color: var(--blue);
 }
 
 pre {
@@ -486,6 +498,7 @@ pre {
 code, pre {
         overflow-x: scroll;
         overflow-y: hidden;
+        border-radius:3px;
 }
 
 pre > code {
@@ -529,12 +542,12 @@ span.feed-header {
 }
 
 span.breadcrumb-spacer {
-        font-weight: var(--bold);
-        color: var(--purple);
-        margin-left: 0.5em;
-        margin-right: 0.5em;
-        position: relative;
-        top: 0.2ex;
+            font-weight: var(--regular);
+    color: var(--purple);
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    position: relative;
+    top: 0.2ex;
 }
 
 dl {
@@ -662,11 +675,11 @@ footer div#elsewhere {
 }
 
 footer nav a.breadcrumb-link {
-        color: var(--alt-text);
+        color: var(--blue);
 }
 
 article blockquote {
-        border-left: solid 3px var(--purple);
+        border-left: solid 3px var(--green-light);
         padding-left: 15px;
         margin-left: 10px;
 }
