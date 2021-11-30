@@ -212,6 +212,7 @@ article aside note {
         background-color: var(--green-light-t);
         border-left: solid 5px var(--green-light);
         padding: 10px;
+        border-radius:3px;
 }
 
 article p {
@@ -464,10 +465,6 @@ ul.link-list a.section-link::after {
 
 a.section-link:hover, a.breadcrumb-link:hover {
         background-color: var(--blue-t);
-}
-
-a.section-link:hover::after {
-        padding-left: 5px;
 }
 
 a.breadcrumb-link {
