@@ -152,7 +152,7 @@ a.out-link:after {
 a.subheading-link:hover:after {
         content: "§";
         margin-left: 0.5em;
-        color: #aaa;
+        color: var(--blue-light);
         font-size: 85%;
         position: relative;
         top: -1pt;
@@ -228,16 +228,16 @@ article li:before {
         font-family: var(--sans-font-body);
 }
 
-article ol.ex {
-        list-style-type: none;
-}
-
 article ol li, article ul li {
         margin-bottom: 0.5em;
         margin-left: 2.5em;
         color: var(--text);
         font-family: var(--sans-font-body);
-        list-style-type: "›";
+        list-style-type: "› ";
+}
+
+article ol.ex {
+        list-style-type: none;
 }
 
 article ul li {
