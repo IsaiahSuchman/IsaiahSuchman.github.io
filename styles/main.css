@@ -492,8 +492,12 @@ ul.link-list a.section-link::after {
         color: var(--blue);
 }
 
-a.section-link:hover {
+a.section-link:hover, a.breadcrumb-link:hover {
         background-color: var(--blue-t);
+}
+
+header nav a.breadcrumb-link:hover {
+        background-color:none;
 }
 
 a.breadcrumb-link {
