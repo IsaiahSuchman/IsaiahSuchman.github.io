@@ -244,6 +244,9 @@ article aside note {
         border-radius:3px;
 }
 
+article aside note h2 {
+        margin-bottom:0;
+
 article p {
         display: block;
         text-align:justify;
