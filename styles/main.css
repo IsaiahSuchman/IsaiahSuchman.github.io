@@ -2,11 +2,9 @@
 @import url("https://use.typekit.net/pfl5utv.css");
 
 :root {
-        --bg: #edf4f7;
-        --bg-night: #313c3f; 
+        --bg: #f8fbfc;
         --text: #313c3f;
-        --text-night: #edf4f7; 
-        --alt-text: #000000; --alt-text-night: #ffffff; 
+        --alt-text: #555;
         
         --purple: #8252a1;
         --purple-light: #945cbc;
@@ -18,7 +16,7 @@
         --green-light-t: rgba(127, 195, 80,.3);
         --teal: #009cac;
 
-        --serif-font: 'Source Serif Pro', serif;
+        --serif-font: 'skolar-pe', serif;
         --sans-font: 'Inter', sans-serif;
         --sans-font-body: 'skolar-sans-pe', sans-serif;
         --unicode-font: 'Fira Sans', sans-serif;
@@ -37,12 +35,9 @@
         --black: 900;
 }
 
-@media (prefers-color-scheme: dark) {
-        :root {
-                --bg: var(--bg-night);
-                --text: var(--text-night);
-                --alt-text: var(--alt-text-night);
-        }
+::selection {
+        color: var(--bg);
+        background: var(--text);
 }
 
 * {
@@ -69,19 +64,35 @@ p {
         font-weight: var(--regular);
 }
 
-.serif {
+.em {
    font-family: var(--serif-font);
+   font-weight: var(--medium);
+}
+
+.sc {
+    font-family: var(--serif-font);
+    font-weight: var(--regular);
+    color: var(--teal);
+    text-transform: uppercase;
+    letter-spacing: 1pt;
+    font-size: 0.75em;
+}
+
+.intro {
+        font-size: 1.25em;
+        font-family: var(--serif-font);
 }
 
 h1, h2, h3, h4, h5, h6 {
         font-family: var(--sans-font);
         color: var(--text);
-        font-weight: var(--light);
+        font-weight: var(--medium);
 }
 
 h1 {
         font-family: var(--sans-font);
         font-size: 140%;
+        font-weight: var(--light);
 }
 
 h2 {
@@ -204,6 +215,7 @@ article aside note {
 
 article p {
         display: block;
+        text-align:justify;
 }
 
 article li, article p {
@@ -230,6 +242,11 @@ article ol li, article ul li {
 article ul li {
         margin-left: 30px;
 }
+
+li::marker {
+        content: "›";
+        color: var(--teal);
+        font-family: var(--sans-font-body);
 
 li:last-child {
         margin-bottom: 0em !important;
@@ -419,6 +436,7 @@ ul.link-list {
         list-style-type: none;
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-evenly;
 }
 
 ul.link-list li {
@@ -449,15 +467,16 @@ a.breadcrumb-link {
 }
 
 pre {
-        border-top: solid 1px var(--green);
-        border-bottom: solid 1px var(--green);
+        border-top: solid 3px var(--green);
+        border-bottom: solid 3px var(--green);
         background-color: var(--green-light-t);
         max-width: 650px;
-        padding: 10px;
+        padding: 20px;
 }
 
 code, pre {
-        overflow: scroll;
+        overflow-x: scroll;
+        overflow-y: hidden;
 }
 
 pre > code {
@@ -487,8 +506,8 @@ div[class="abstract"] p {
         font-size: 105%;
         }
 
-ul.feed {
-        list-style-type: square;
+ul {
+        list-style-type: none;
 }
 
 ul.feed li {
@@ -497,13 +516,7 @@ ul.feed li {
 }
 
 span.feed-header {
-    font-family: var(--serif-font);
-    font-weight: var(--regular);
     display: block;
-    color: var(--teal);
-    text-transform: uppercase;
-    letter-spacing: 0.5pt;
-    font-size: 0.75em;
     position: relative;
     top: -2pt;
 }
@@ -612,9 +625,8 @@ footer {
         width: 100%;
         z-index: 100;
         padding-bottom: 100px;
-        background-color: var(--purple-light);
-        border-top: solid 1px var(--purple);
         flex-shrink: 0;
+        
 }
 
 footer nav{
@@ -624,6 +636,7 @@ footer nav{
         z-index: 100;
         padding-left: 30px;
         padding-right: 30px;
+        border-top: solid 3px var(--purple);
 }
 
 footer div#sitemap ul, footer div#elsewhere ul {
