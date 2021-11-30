@@ -103,7 +103,7 @@ img#portrait {
 }
 
 div.spacer {
-    min-height: calc((100vh - 554px) / 3);
+    min-height: calc((100vh - 543px) / 3);
         display:none;
 }
 
