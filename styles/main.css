@@ -77,12 +77,16 @@ p {
 }
 
 .sc {
-    font-family: var(--serif-font);
-    font-weight: var(--regular);
-    color: var(--teal);
+    font-family: var(--sans-font-body);
+    font-weight: var(--medium);
     text-transform: uppercase;
     letter-spacing: 1.5pt;
     font-size: 0.75em;
+}
+
+.teal {
+        color: var(--teal);
+        font-family: var(--serif-font);
 }
 
 .intro {
@@ -506,7 +510,7 @@ a.section-link:hover, a.breadcrumb-link:hover {
 }
 
 header nav a.breadcrumb-link:hover {
-        background-color:none;
+        background-color:transparent;
 }
 
 a.breadcrumb-link {
