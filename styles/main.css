@@ -48,6 +48,7 @@
 
 html, body {
         height: 100%;
+        overflow: scroll;
 }
 
 html::after {
@@ -315,12 +316,14 @@ span.new-thought {
 }
 
 body > header {
-        height: 50px;
+        /* height: 50px; */
         display: grid;
         grid-template-columns: min(var(--max-width), 100vw);
         justify-content: center;
         width: 100%;
         z-index: 100;
+        position: sticky;
+        top: 0;
 }
 
 body > header nav {
@@ -331,6 +334,8 @@ body > header nav {
         z-index: 100;
         padding-left: 30px;
         padding-right: 30px;
+        padding-top: 10px;
+        padding-bottom: 10px;
 }
 
 header nav a {
@@ -366,13 +371,11 @@ header nav a {
 
 @media all and (max-width: 640px) {
         body > header {
-                position: fixed;
-                top: 0;
-                height: 104px;
+                /* height: 104px; */
         }
 
         div#content{
-                margin-top: 100px;
+                /* margin-top: 100px; */
         }
 
         article {
@@ -386,7 +389,8 @@ header nav a {
         }
         body > header {
                 flex-direction:column;
-                background-color: var(--bg-t);
+                background-color: var(--bg);
+
         }
         footer {
                 background-color: var(--bg-t);
