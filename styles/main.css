@@ -4,6 +4,7 @@
 :root {
         --bg: #f8fbfc;
         --bg-t: rgba(248, 251, 252, 0.5);
+        --bg-i: url(https://i.imgur.com/7tJxYHT.jpg);
         --text: #313c3f;
         --alt-text: #555;
         
@@ -49,6 +50,10 @@
 html, body {
         height: 100%;
         overflow: scroll;
+        background: var(--bg-i);
+        background-position:center;
+        background-attachment: fixed;
+        background-size:cover;
 }
 
 html::after {
@@ -182,6 +187,10 @@ div#content {
         padding-left: 30px;
         padding-right: 30px;
         flex: 1 0 auto;
+        background: var(--bg-i);
+        background-position:center;
+        background-attachment: fixed;
+        background-size:cover;
 }
 
 article {
@@ -336,6 +345,10 @@ body > header nav {
         padding-right: 30px;
         padding-top: 10px;
         padding-bottom: 10px;
+        background: var(--bg-i);
+        background-position:center;
+        background-attachment: fixed;
+        background-size:cover;
 }
 
 header nav a {
@@ -387,13 +400,11 @@ header nav a {
         header nav a {
                 font-size: 100%;
         }
-        body > header {
+        body > header nav {
                 flex-direction:column;
-                background-color: var(--bg);
 
         }
         footer {
-                background-color: var(--bg-t);
         }
         span.breadcrumb-spacer {
                 display:none;
@@ -481,7 +492,7 @@ ul.link-list a.section-link::after {
         color: var(--blue);
 }
 
-a.section-link:hover, a.breadcrumb-link:hover {
+a.section-link:hover {
         background-color: var(--blue-t);
 }
 
