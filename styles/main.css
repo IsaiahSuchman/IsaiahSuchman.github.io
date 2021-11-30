@@ -104,6 +104,20 @@ p {
         font-family: var(--serif-font);
 }
 
+div#photo {
+    margin-top: 8ex;
+    text-align: center;
+}
+
+img#portrait {
+    height: 200px;
+    border-radius: 50%;
+}
+
+div#spacer {
+    min-height: 12ex;
+}
+
 h1, h2, h3, h4, h5, h6 {
         font-family: var(--sans-font);
         color: var(--text);
@@ -398,7 +412,7 @@ header nav a {
                 font-size:min(var(--font-size), 6vw);
         }
         header nav a {
-                font-size: 100%;
+                font-size: 125%;
         }
         body > header nav {
                 flex-direction:column;
@@ -414,7 +428,7 @@ header nav a {
 @media all and (min-width: 640px) {
 
         body > header {
-                margin-top: 12ex;
+                /* margin-top: 12ex; */
                 /* position: absolute; */
         }
 
