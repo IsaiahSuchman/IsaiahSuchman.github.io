@@ -71,7 +71,7 @@ p {
         font-weight: var(--regular);
 }
 
-.em {
+.em, .intro {
    font-family: var(--serif-font);
    font-weight: var(--medium);
 }
@@ -88,7 +88,7 @@ p {
         color: var(--teal);
 }
 
-.intro, .serif {
+.serif {
         font-family: var(--serif-font);
 }
 
