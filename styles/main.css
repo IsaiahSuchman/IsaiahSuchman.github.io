@@ -607,8 +607,6 @@ dl {
 dt {
         font-family: var(--sans-font-body);
         font-weight: var(--medium);
-        font-variant: small-caps;
-        text-transform: lowercase;
         letter-spacing: 0.5pt;
         margin-top: 3ex;
 }
