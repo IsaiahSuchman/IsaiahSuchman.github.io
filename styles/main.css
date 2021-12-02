@@ -605,7 +605,7 @@ dl {
 }
 
 dt {
-        font-family: var(--sans-font-body);
+        font-family: var(--sans-font);
         font-weight: var(--medium);
         letter-spacing: 0.5pt;
         margin-top: 3ex;
