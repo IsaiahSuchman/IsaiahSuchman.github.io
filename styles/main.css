@@ -54,6 +54,7 @@ html, body {
         background-position:center;
         background-attachment: fixed;
         background-size:cover;
+        overflow: auto;
 }
 
 body {
@@ -344,6 +345,7 @@ body > header {
 
 body > header nav {
         border-bottom: solid 3px var(--purple);
+        box-shadow: 0px 7px 7px -7px rgb(0 0 0 / 30%);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -703,6 +705,7 @@ footer nav{
         padding-left: 30px;
         padding-right: 30px;
         border-top: solid 3px var(--purple);
+        box-shadow: 0px -7px 7px -7px rgb(0 0 0 / 30%);
 }
 
 footer div#sitemap ul, footer div#elsewhere ul {
