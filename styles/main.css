@@ -169,7 +169,6 @@ a.out-link:hover {
 a.out-link:after {
   position: relative;
         content: "\FEFF°";
-  font-size: 90%;
   color: var(--blue-light);
         font-weight: var(--bold);
         font-family: var(--mono-font);
